@@ -8,3 +8,5 @@ create table board(
 	readcount number(4) default 0,
 	writedate date default sysdate
 );
+
+create sequence board_seq start with 1 increment by 1;
