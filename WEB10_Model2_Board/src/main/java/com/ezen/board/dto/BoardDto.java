@@ -3,19 +3,19 @@ package com.ezen.board.dto;
 import java.sql.Timestamp;
 
 public class BoardDto {
-	private Integer num;
+	private int num;
 	private String pass;
-	private String name;
+	private String userid;
 	private String email;
 	private String title;
 	private String content;
-	private Integer readcount;
+	private int readcount;
 	private Timestamp writedate;
 	
-	public Integer getNum() {
+	public int getNum() {
 		return num;
 	}
-	public void setNum(Integer num) {
+	public void setNum(int num) {
 		this.num = num;
 	}
 	public String getPass() {
@@ -24,11 +24,11 @@ public class BoardDto {
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	public String getName() {
-		return name;
+	public String getUserid() {
+		return userid;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setUserid(String userid) {
+		this.userid = userid;
 	}
 	public String getEmail() {
 		return email;
@@ -48,10 +48,10 @@ public class BoardDto {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public Integer getReadcount() {
+	public int getReadcount() {
 		return readcount;
 	}
-	public void setReadcount(Integer readcount) {
+	public void setReadcount(int readcount) {
 		this.readcount = readcount;
 	}
 	public Timestamp getWritedate() {
