@@ -26,7 +26,7 @@ public class LoginAction implements Action {
 		}else if(mdto.getUserpwd().equals(userpwd)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mdto);
-			url = "main.jsp";
+			url = "board.do?command=boardlist";
 		}
 		else if(!mdto.getUserpwd().equals(userpwd)) {
 			request.setAttribute("message", "비밀번호가 틀렸습니다.");

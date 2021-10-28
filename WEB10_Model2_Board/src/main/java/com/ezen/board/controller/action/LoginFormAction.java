@@ -15,7 +15,7 @@ public class LoginFormAction implements Action {
 		
 		HttpSession session = request.getSession(); // 페이지의 세션 추출
 		if(session.getAttribute("loginUser") != null)
-			url = "main.jsp";
+			url = "board.do?command=boardlist";
 		
 		RequestDispatcher dp = request.getRequestDispatcher(url);
 		dp.forward(request, response);
