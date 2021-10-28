@@ -43,4 +43,47 @@ public class MemberDao {
 		}
 		return mdto;
 	}
+
+	public int confirmID(String userid){
+		int result = 0;
+		con = DBman.getConnection();
+		
+		String sql = "select * from member where userid= ?";
+		try {
+			 pstmt = con.prepareStatement(sql);
+			 pstmt.setString(1, userid);
+			 rs = pstmt.executeQuery();
+			 if(rs.next()) { // 사용 중
+				 result = 1;
+			 }else { // 사용가능
+				 result = -1;
+			 }
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		
+		DBman.close(con, pstmt, rs);
+		return result;
+	}
+
+	public int insertMember(MemberDto mdto) {
+		int result = 0;
+		con = DBman.getConnection();
+		String sql = "insert into member values(?,?,?,?,?,?)";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mdto.getName());
+			pstmt.setString(2, mdto.getUserid());
+			pstmt.setString(3, mdto.getUserpwd());
+			pstmt.setString(4, mdto.getEmail());
+			pstmt.setString(5, mdto.getPhone());
+			pstmt.setInt(6, mdto.getAdmin());
+			
+			result = pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		DBman.close(con, pstmt, rs);
+		return result;
+	}
 }

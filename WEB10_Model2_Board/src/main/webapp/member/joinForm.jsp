@@ -5,6 +5,7 @@
 		<meta charset="UTF-8">
 		<title>JoinForm</title>
 		<link rel="stylesheet" type="text/css" href="css/board.css">
+		<script type="text/javascript" src="script/board.js"></script>
 	</head>
 	<body>
 		<h1>사용자 등록</h1>
