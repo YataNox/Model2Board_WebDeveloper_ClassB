@@ -23,11 +23,15 @@ public class LoginAction implements Action {
 		
 		if(mdto == null) {
 			request.setAttribute("message", "존재하지 않는 아이디입니다.");
-		}else if(!mdto.getUserpwd().equals(userpwd)) {
+		}else if(mdto.getUserpwd().equals(userpwd)) {
 			HttpSession session = request.getSession();
 			session.setAttribute("loginUser", mdto);
 			url = "main.jsp";
-		}else {
+		}
+		else if(!mdto.getUserpwd().equals(userpwd)) {
+			request.setAttribute("message", "비밀번호가 틀렸습니다.");
+		}
+		else {
 			request.setAttribute("message", "DB 또는 System 오류");
 		}
 		
