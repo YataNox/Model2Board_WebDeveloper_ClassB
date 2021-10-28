@@ -1,6 +1,7 @@
 package com.ezen.board.controller;
 
 import com.ezen.board.controller.action.Action;
+import com.ezen.board.controller.action.LoginAction;
 import com.ezen.board.controller.action.LoginFormAction;
 
 public class ActionFactory {
@@ -11,7 +12,8 @@ public class ActionFactory {
 	public Action getAction(String command) {
 		Action ac = null;
 		
-		if(command.equals("loginForm")) ac = new LoginFormAction(); 
+		if(command.equals("loginForm")) ac = new LoginFormAction();
+		else if(command.equals("login")) ac = new LoginAction();
 		
 		
 		return ac;
