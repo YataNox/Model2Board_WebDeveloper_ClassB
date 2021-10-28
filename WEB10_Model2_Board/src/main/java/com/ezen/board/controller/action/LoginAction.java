@@ -6,6 +6,7 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.ezen.board.dao.MemberDao;
 import com.ezen.board.dto.MemberDto;
@@ -22,6 +23,12 @@ public class LoginAction implements Action {
 		
 		if(mdto == null) {
 			request.setAttribute("message", "존재하지 않는 아이디입니다.");
+		}else if(!mdto.getUserpwd().equals(userpwd)) {
+			HttpSession session = request.getSession();
+			session.setAttribute("loginUser", mdto);
+			url = "main.jsp";
+		}else {
+			request.setAttribute("message", "DB 또는 System 오류");
 		}
 		
 		RequestDispatcher dp = request.getRequestDispatcher(url);
