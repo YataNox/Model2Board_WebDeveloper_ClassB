@@ -58,7 +58,7 @@
 				</table>
 				<input type="submit" value="확인" onClick="return joinCheck()">&nbsp;
 				<input type="reset" value="다시작성">
-				<input type="button" value="목록으로" src="location.href='board.do?command=boardList'">
+				<input type="button" value="목록으로" onClick="location.href='board.do?command=boardlist'">
 			</form>
 	</body>
 </html>
