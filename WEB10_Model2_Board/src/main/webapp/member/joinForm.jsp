@@ -26,11 +26,11 @@
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td><input type="password" size="20" name="pwd">*</td>
+					<td><input type="password" size="20" name="userpwd">*</td>
 				</tr>
 				<tr>
 					<th>비밀번호 확인</th>
-					<td><input type="password" size="20" name="pwd_check">*</td>
+					<td><input type="password" size="20" name="userpwd_check">*</td>
 				</tr>
 				<tr>
 					<th>이메일</th>
