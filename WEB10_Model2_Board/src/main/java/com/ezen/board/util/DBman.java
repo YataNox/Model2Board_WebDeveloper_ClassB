@@ -26,13 +26,14 @@ public class DBman {
 			DataSource ds = (DataSource)envContext.lookup("jdbc/myoracle");
 			// 생성된 DBCP에서 연결 객체를 하나 전달 받습니다.
 			con = ds.getConnection();
+			System.out.println("연결 성공~!");
 		} catch (NamingException e) {
 			e.printStackTrace();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
 		
-		System.out.println("연결 성공~!");
+		
 		return con;
 	}
 	public static void close(Connection con, PreparedStatement pstmt, ResultSet rs){
