@@ -61,3 +61,22 @@ function idok(){
 	// 현재 팝업창은 스스로 닫습니다.
 	self.close();
 }
+
+function editCheck(){
+	if(document.frm.name.value.length==0){
+		alert("이름은 필수 입력 사항입니다.");
+		document.frm.name.focus();
+		return false;
+	}
+	if(document.frm.userpwd.value.length==0){
+		alert("비밀번호는 필수 입력 사항입니다.");
+		document.frm.userpwd.focus();
+		return false;
+	}
+	if(document.frm.userpwd.value != document.frm.userpwd_check.value){
+		alert("비밀번호 확인이 일치하지 않습니다.");
+		document.frm.userpwd_check.focus();
+		return false;
+	}
+	return true;
+}
