@@ -53,11 +53,11 @@ function joinCheck(){
 	return true;
 }
 
-function idok(){
+function idok(userid){
 	// 현재 팝업창의 아이디 입력란에 있는 아이디를 오프너의 아이디 입력란에 복사합니다.
-	opener.document.frm.userid.value = document.frm.userid.value;
+	opener.document.frm.userid.value = userid;
 	// 현재 팝업창의 아이디 입력란에 있는 아이디를 오프너의 reid의 value에 복사합니다.
-	opener.document.frm.reid.value = document.frm.userid.value;
+	opener.document.frm.reid.value = userid;
 	// 현재 팝업창은 스스로 닫습니다.
 	self.close();
 }
