@@ -9,9 +9,10 @@
 		<script type="text/javascript" src="script/board.js"></script>
 	</head>
 	<body>
-		<div id="wrap" align="center"></div>
+		<div id="wrap" align="center">
 			<h1>사용자 수정</h1>
-			<form action="board.do" method="post" name="frm">
+		</div>
+			<form name="frm" action="board.do" method="post">
 				<input type="hidden" name="command" value="editMember">
 				<table>
 					<tr>
@@ -56,9 +57,9 @@
 						</td>
 					</tr>
 				</table>
-				<input type="submit" value="확인" onClick="return joinCheck()">&nbsp;
-				<input type="reset" value="다시작성">
-				<input type="button" value="목록으로" onClick="location.href='board.do?command=boardlist'">
+				<input type="submit" value="수정" onclick="return editCheck()">&nbsp;
+				<input type="reset" value="다시작성"/>
+				<input type="button" value="목록으로" onclick="location.href='board.do?command=boardlist'"/>
 			</form>
 	</body>
 </html>

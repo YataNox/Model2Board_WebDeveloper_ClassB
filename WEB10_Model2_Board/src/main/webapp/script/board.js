@@ -63,12 +63,12 @@ function idok(){
 }
 
 function editCheck(){
-	if(document.frm.name.value.length==0){
+	if(document.frm.name.value==""){
 		alert("이름은 필수 입력 사항입니다.");
 		document.frm.name.focus();
 		return false;
 	}
-	if(document.frm.userpwd.value.length==0){
+	if(document.frm.userpwd.value==""){
 		alert("비밀번호는 필수 입력 사항입니다.");
 		document.frm.userpwd.focus();
 		return false;
@@ -78,5 +78,6 @@ function editCheck(){
 		document.frm.userpwd_check.focus();
 		return false;
 	}
+	alert("개인 정보 수정 완료");
 	return true;
 }
