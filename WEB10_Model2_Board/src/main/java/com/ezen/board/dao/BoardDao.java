@@ -69,4 +69,48 @@ public class BoardDao {
 		}
 		
 	}
+
+	public void updateReadcount(int num) {
+		con = DBman.getConnection();
+		String sql = "update board set readcount = readcount + 1 where num = ?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
+
+	public BoardDto getBoard(int num) {
+		BoardDto bdto = null;
+		con = DBman.getConnection();
+		
+		String sql = "select * from board where num=?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				bdto = new BoardDto();
+				bdto.setNum(rs.getInt("num"));
+				bdto.setUserid(rs.getString("userid"));
+				bdto.setPass(rs.getString("pass"));
+				bdto.setEmail(rs.getString("email"));
+				bdto.setTitle(rs.getString("title"));
+				bdto.setContent(rs.getString("content"));
+				bdto.setWritedate(rs.getTimestamp("writedate"));
+				bdto.setReadcount(rs.getInt("readcount"));
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		return bdto;
+	}
 }
