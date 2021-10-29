@@ -8,7 +8,9 @@
 		<script type="text/javascript" src="script/board.js"></script>
 	</head>
 	<body>
-		<h1>사용자 등록</h1>
+		<div id="wrap" align="center">
+			<h1>사용자 등록</h1>
+		</div>
 		<form name="frm" method="post" action="board.do">
 			<input type="hidden" name="command" value="join">
 			<table>
