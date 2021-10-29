@@ -81,3 +81,22 @@ function editCheck(){
 	alert("개인 정보 수정 완료");
 	return true;
 }
+
+function boardCheck(){
+	if(document.frm.pass.value==""){
+		alert("비밀번호는 수정/삭제시 필요합니다.");
+		document.frm.pass.focus();
+		return false;
+	}
+	if(document.frm.title.value==""){
+		alert("제목은 필수 사항입니다.");
+		document.frm.title.focus();
+		return false;
+	}
+	if(document.frm.content.value == ""){
+		alert("내용을 입력해주세요.");
+		document.frm.content.focus();
+		return false;
+	}
+	return true;
+}
