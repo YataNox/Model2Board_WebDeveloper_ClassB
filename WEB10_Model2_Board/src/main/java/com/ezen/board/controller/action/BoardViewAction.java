@@ -21,7 +21,7 @@ public class BoardViewAction implements Action {
 		BoardDto bdto = bdao.getBoard(num);
 		
 		// 리턴받은 게시글을 request에 저장하고 boardView.jsp로 포워딩합니다.
-		request.setAttribute("bdto", bdto);
+		request.setAttribute("board", bdto);
 		
 		RequestDispatcher dp = request.getRequestDispatcher("board/boardView.jsp");
 		dp.forward(request, response);
