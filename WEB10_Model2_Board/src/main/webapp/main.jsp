@@ -17,14 +17,12 @@
 				<td colspan="5" style="border:white">
 					<div style="float: left;">
 						${loginUser.name}(${loginUser.userid})님 로그인 
-						<input type="button"value="회원정보수정"
-							onClick="location.href='board.do?command=editMemberForm'">
-						<input type="button" value="로그아웃"
-							onClick="location.href='board.do?command=logout'">
+						<input type="button"value="회원정보수정" onClick="location.href='board.do?command=editMemberForm'">
+						<input type="button" value="로그아웃" onClick="location.href='board.do?command=logout'">
 					</div>
 					<div style="float:right">
-							<a href="board.do?command=boardWriteForm">게시글 등록</a>
-						</div>
+						<a href="board.do?command=boardWriteForm">게시글 등록</a>
+					</div>
 				</td>
 			</tr>
 			<tr>
