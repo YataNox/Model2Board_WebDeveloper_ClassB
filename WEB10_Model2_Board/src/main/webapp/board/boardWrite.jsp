@@ -18,7 +18,7 @@
 			<table>
 			<tr>
 				<th>작성자</th>
-				<td>${loginUser.userid}<input type="hidden" name="name" value="${loginUser.userid}"></td>
+				<td>${loginUser.userid}<input type="hidden" name="userid" value="${loginUser.userid}"></td>
 			</tr>
 			<tr>
 				<th>비밀번호</th>
