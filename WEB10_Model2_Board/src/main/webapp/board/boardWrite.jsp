@@ -14,7 +14,7 @@
 			<h1>게시글 등록</h1>
 		</div>
 		<form action="board.do" name="frm" method="post">
-			<input type="hidden" name="command" value="boardwrite">
+			<input type="hidden" name="command" value="boardWrite">
 			<table>
 			<tr>
 				<th>작성자</th>
