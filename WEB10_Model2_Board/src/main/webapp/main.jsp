@@ -37,7 +37,7 @@
 			<c:forEach var="board" items="${boardList}">
 				<tr align="center">
 					<td>${board.num}</td>
-					<td align="left"><a href="board.do?command=boardView&num=${board.title}">${board.title}</a></td>
+					<td align="left"><a href="board.do?command=boardView&num=${board.num}">${board.title}</a></td>
 					<td>${board.userid}</td>
 					<td><fmt:formatDate value="${board.writedate}"/></td>
 					<td>${board.readcount}</td>
