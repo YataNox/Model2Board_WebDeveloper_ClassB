@@ -101,8 +101,14 @@ function boardCheck(){
 	return true;
 }
 
+/* 게시물 수정 전 비밀번호 확인 팝업창 표시 function*/
 function open_win(num, name){
-	var url = "board.do?command=boardPassForm&num = " + num;
-	var opt = "toolbar=no, menubar=no, scrollbar=yes, resizable=no, width=500, height=200";
+	var url = "board.do?command=boardPassForm&num=" + num;
+	var opt = "toolbar=no, menubar=no, scrollbar=yes, resizable=no, width=500, height=300";
 	window.open(url, name, opt);
 }
+
+/* 게시물 수정 비밀번호 확인 funtion
+function passCheck(){
+	
+}*/
