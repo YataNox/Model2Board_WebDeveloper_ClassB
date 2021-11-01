@@ -123,3 +123,13 @@ function passCheck(){
 	}
 	return true;
 }
+
+/* 댓글 체크 function */
+function reply_check(){
+	if(document.frm2.reply.value==""){
+		alert("댓글은 내용이 필수입니다.");
+		document.frm2.reply.focus();
+		return false;
+	}
+	return true;
+}
