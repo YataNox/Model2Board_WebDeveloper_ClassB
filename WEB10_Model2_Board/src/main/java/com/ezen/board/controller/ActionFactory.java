@@ -4,6 +4,7 @@ import com.ezen.board.controller.action.Action;
 import com.ezen.board.controller.action.BoardCheckPassAction;
 import com.ezen.board.controller.action.BoardListAction;
 import com.ezen.board.controller.action.BoardPassFormAction;
+import com.ezen.board.controller.action.BoardUpdateAction;
 import com.ezen.board.controller.action.BoardUpdateFormAction;
 import com.ezen.board.controller.action.BoardViewAction;
 import com.ezen.board.controller.action.BoardViewWithoutCountAction;
@@ -42,6 +43,7 @@ public class ActionFactory {
 		else if(command.equals("boardCheckPass")) ac = new BoardCheckPassAction();
 		else if(command.equals("boardUpdateForm")) ac = new BoardUpdateFormAction();
 		else if(command.equals("boardviewwithoutcount")) ac = new BoardViewWithoutCountAction();
+		else if(command.equals("boardupdate")) ac = new BoardUpdateAction();
 		return ac;
 	}
 }
