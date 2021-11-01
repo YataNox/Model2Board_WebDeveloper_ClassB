@@ -48,3 +48,7 @@ create table reply(
 );
 
 create sequence reply_seq start with 1 increment by 1;
+
+alter table board add replycnt number(3) default 0;
+
+select * from board;
