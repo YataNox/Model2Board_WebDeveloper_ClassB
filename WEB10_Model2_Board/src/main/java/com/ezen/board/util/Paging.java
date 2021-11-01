@@ -22,6 +22,32 @@ public class Paging {
 	private int startNum; // 현재 페이지에 표시될 게시물 번호의 시작 번호
 	private int endNum; // 현재 페이지에 표시될 게시물 번호의 끝 번호
 	
+	private void callPaging() {
+		// 각 멤버변수 값을 세팅합니다.
+		double temp = page / (double)displayPage; // 1 / 10.0 -> 0.1
+		temp = Math.ceil(temp); // 소수점 첫 자리 올림 연산
+		endPage = (int)(temp * displayPage); // 화면에 표시할 페이지 숫자를 곱셈
+		// endPage = ((int)(Math.ceil(page/(double)displayPage))) * displayPage;
+		beginPage = endPage - displayPage + 1;
+		
+		int totalPage = (int)Math.ceil(totalCount / (double)displayRow);
+		// 총 게시물 수를 한 화면에 표시한 게시물 수로 나눠서 총 페이지 수를 계산
+		
+		if(totalPage < endPage) { // 총 페이지가 현재 endPage보다 작다면
+			endPage = totalPage; // endPage를 총 페이지수로 대체하고
+			next = false; // 다음 버튼은 표시하지 않는 것으로 설정
+		}else { // endPage 뒤로 페이지가 더 있으니. next를 표시하는 것으로 설정
+			next = true;
+		}
+		
+		prev = (beginPage == 1)? false : true; // 시작페이지가 1인 경우만 표시 안함
+		
+		startNum = (page - 1) * displayRow + 1;
+		// 현재 화면의 시작 게시물 번호
+		endNum = page * displayRow;
+		// 현재 화면의 끝 게시물 번호
+	}
+	
 	// Getter/Setter---------------------------------------------------------
 	public int getPage() {
 		return page;
@@ -34,6 +60,7 @@ public class Paging {
 	}
 	public void setTotalCount(int totalCount) {
 		this.totalCount = totalCount;
+		callPaging();
 	}
 	public int getDisplayRow() {
 		return displayRow;
