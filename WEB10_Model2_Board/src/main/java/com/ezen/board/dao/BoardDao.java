@@ -151,4 +151,24 @@ public class BoardDao {
 			DBman.close(con, pstmt, rs);
 		}
 	}
+
+	public int getAllCount() {
+		int count = 0;
+		con = DBman.getConnection();
+		String sql = "select count(*) as cnt from board";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next())
+				count = rs.getInt("cnt");
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally{
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return count;
+	}
 }
