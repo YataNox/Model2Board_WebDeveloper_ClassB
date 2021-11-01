@@ -30,8 +30,8 @@
 			</table>
 			<br>
 			<input type="button" value="리스트" onclick="location.href='board.do?command=boardlist'">
-			<input type="button" value="수정" onclick="open_win('${board.num}'), 'update'"/>
-			<input type="button" value="삭제" onclick="open_win('${board.num}'), 'delete'"/>
+			<input type="button" value="수정" onclick="open_win('${board.num}', 'update');"/>
+			<input type="button" value="삭제" onclick="open_win('${board.num}', 'delete');"/>
 		</div>
 	</body>
 </html>
