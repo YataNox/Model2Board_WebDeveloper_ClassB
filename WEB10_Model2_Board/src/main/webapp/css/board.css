@@ -64,3 +64,10 @@ a{
 a:hover{
 	text-decoration: underline; color:green;
 }
+
+#paging{
+	position:relative;
+	margin: 0 auto;
+	font-size: 110%;
+	font-weight: bold;
+}
