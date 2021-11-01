@@ -135,4 +135,20 @@ public class BoardDao {
 			DBman.close(con, pstmt, rs);
 		}
 	}
+
+	public void deleteBoard(int num) {
+		con = DBman.getConnection();
+		String sql = "delete from board where num = ?";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally{
+			DBman.close(con, pstmt, rs);
+		}
+	}
 }
