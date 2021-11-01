@@ -7,9 +7,9 @@
 	</head>
 	<body>
 		<script type="text/javascript">
-			if(window.name="update"){
+			if(window.name=="update"){
 				window.opener.location.href="board.do?command=boardUpdateForm&num=${param.num}";
-			}else if(window.name="delete"){
+			}else if(window.name=="delete"){
 				window.opener.location.href="board.do?command=boardDelete&num=${param.num}";
 			}
 			self.close();
