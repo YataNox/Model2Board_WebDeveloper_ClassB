@@ -37,3 +37,14 @@ select * from(
 select * from(
 select rownum as rn, t.* from(
 select * from board order by num desc) t) where rn <= 10) where rn >= 1;
+
+
+create table reply(
+	num number(7) primary key, -- 댓글 순번
+	boardnum number(5), -- 댓글의 해당 게시물 번호
+	userid varchar2(20), -- 댓글 쓰니
+	writedate date default sysdate, -- 작성일
+	content varchar2(1000) -- 작성내내용
+);
+
+create sequence reply_seq start with 1 increment by 1;
