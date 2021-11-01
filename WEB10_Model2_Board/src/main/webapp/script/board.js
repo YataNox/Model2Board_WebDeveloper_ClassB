@@ -108,7 +108,12 @@ function open_win(num, name){
 	window.open(url, name, opt);
 }
 
-/* 게시물 수정 비밀번호 확인 funtion
+/*게시물 수정 비밀번호 확인 funtion*/
 function passCheck(){
-	
-}*/
+	if(document.frm.pass.value.length==0){
+		alert("비밀번호를 입력하세요");
+		document.frm.pass.focus();
+		return false;
+	}
+	return true;
+}
