@@ -52,3 +52,245 @@ create sequence reply_seq start with 1 increment by 1;
 alter table board add replycnt number(3) default 0;
 
 select * from board;
+
+--120 board exam
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hong', 'abc@naver.com', '1234', '첫방문입니다.', '반갑습니다. 앞으로 많은 격려와 지도편달 부탁드립니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'somi', 'addd@naver.com', '1234', '게시판 개설', '축하드립니다. 무궁한 발전을 기원할게요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'light', 'bnbn@naverc.om', '1234', '돼지골마을', '돼지 삼겹살이 맛있습니다.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '2021년 겨울', '몹시 추울 것 같아요... 다들 건강 유의하세요.');
+insert into board(num, userid, email, pass, title, content)
+values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
