@@ -4,7 +4,7 @@
 <html>
 	<head>
 	<meta charset="UTF-8">
-		<title>Insert title here</title>
+		<title>boardCheckPass.jsp</title>
 		<script type="text/javascript" src="script/board.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/board.css">
 		</head>
