@@ -44,6 +44,32 @@
 				</tr>
 			</c:forEach>
 		</table>
+		<br><br>
+		<div id="paging">
+			<!-- 링크 경로의 기본 텍스트를 변수에 저장 -->
+			<c:url var="action" value="board.do?command=boardlist"/>
+			<c:if test="${paging.prev}">
+				<a href="${action}&page=${paging.beginPage-1}">◀</a>&nbsp;
+				<!-- board.do?command=boardlist&page=10 -->			
+			</c:if>
+			
+			<c:forEach begin="${paging.beginPage}" end="${paging.endPage}" var="index">
+				<c:choose>
+					<c:when test="${paging.page==index}">
+						<!-- 링크 없이 표시 -->
+						<span style="color:red">${index} &nbsp;</span>
+					</c:when>
+					<c:otherwise>
+						<!-- 그 외에는 표시되는 숫자의 페이지를 파라미터로 해서 링크걸어 표시 -->
+						<a href="${action}&page=${index}"> ${index} &nbsp;</a>&nbsp;
+					</c:otherwise>
+				</c:choose>
+			</c:forEach>
+			
+			<c:if test="${paging.next}">
+				<a href="${action}&page=${paging.endPage+1}">▶</a>&nbsp;		
+			</c:if>
+		</div>
 	</div>
 </body>
 </html>
