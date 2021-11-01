@@ -100,3 +100,9 @@ function boardCheck(){
 	}
 	return true;
 }
+
+function open_win(num, name){
+	var url = "board.do?command=boardPassForm&num = " + num;
+	var opt = "toolbar=no, menubar=no, scrollbar=yes, resizable=no, width=500, height=200";
+	window.open(url, name, opt);
+}
