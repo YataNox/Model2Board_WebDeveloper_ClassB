@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 import com.ezen.board.dto.BoardDto;
 import com.ezen.board.util.DBman;
+import com.ezen.board.util.Paging;
 
 public class BoardDao {
 	private BoardDao() {}
@@ -18,14 +19,19 @@ public class BoardDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	public ArrayList<BoardDto> selectBoard() 
+	public ArrayList<BoardDto> selectBoard(Paging paging) 
 	{
 		ArrayList<BoardDto> list = new ArrayList<BoardDto>();
 		con = DBman.getConnection();
-		String sql = "select * from board order by num desc";
+		String sql = "select * from("
+				+ "select * from("
+				+ "select rownum as rn, t.* from("
+				+ "select * from board order by num desc) t) where rn <= ?) where rn >= ?";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, paging.getEndNum());
+			pstmt.setInt(2, paging.getStartNum());
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
