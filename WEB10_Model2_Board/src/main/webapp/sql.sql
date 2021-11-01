@@ -31,3 +31,9 @@ insert into board(num, userid, email, pass, title, content)
 values(board_seq.nextVal, 'hana', 'hana@daum.net', '1234', '코로나바이러스', '사회적 거리두기 2단계.... 백신접종 등등등');
 
 select * from BOARD;
+
+-- 단순히 between이나 and 연산을 사용해서 검색하면 데이터가 충분히 많을 때 오히려 속도가 저하될 수 있다.
+select * from(
+select * from(
+select rownum as rn, t.* from(
+select * from board order by num desc) t) where rn <= 10) where rn >= 1;
