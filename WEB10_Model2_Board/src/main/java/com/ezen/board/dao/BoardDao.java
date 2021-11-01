@@ -116,7 +116,7 @@ public class BoardDao {
 
 	public void updateBoard(BoardDto bdto) {
 		con = DBman.getConnection();
-		String url="update board set userid=?, pass=?, email=?, title=?, content=?, "
+		String url="update board set userid=?, pass=?, email=?, title=?, content=? "
 				+ "where num=?";
 		
 		try {
