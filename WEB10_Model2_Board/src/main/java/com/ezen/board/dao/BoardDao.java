@@ -113,4 +113,26 @@ public class BoardDao {
 		}
 		return bdto;
 	}
+
+	public void updateBoard(BoardDto bdto) {
+		con = DBman.getConnection();
+		String url="update board set userid=?, pass=?, email=?, title=?, content=?, "
+				+ "where num=?";
+		
+		try {
+			pstmt = con.prepareStatement(url);
+			pstmt.setString(1, bdto.getUserid());
+			pstmt.setString(2, bdto.getPass());
+			pstmt.setString(3, bdto.getEmail());
+			pstmt.setString(4, bdto.getTitle());
+			pstmt.setString(5, bdto.getContent());
+			pstmt.setInt(6, bdto.getNum());
+			
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+	}
 }
