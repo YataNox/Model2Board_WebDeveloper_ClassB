@@ -12,6 +12,7 @@ import com.ezen.board.controller.action.BoardViewAction;
 import com.ezen.board.controller.action.BoardViewWithoutCountAction;
 import com.ezen.board.controller.action.BoardWriteAction;
 import com.ezen.board.controller.action.BoardWriteFormAction;
+import com.ezen.board.controller.action.DeleteReplyAction;
 import com.ezen.board.controller.action.EditMemberAction;
 import com.ezen.board.controller.action.EditMemberFormAction;
 import com.ezen.board.controller.action.IdCheckAction;
@@ -48,6 +49,7 @@ public class ActionFactory {
 		else if(command.equals("boardupdate")) ac = new BoardUpdateAction();
 		else if(command.equals("boardDelete")) ac = new BoardDeleteAction();
 		else if(command.equals("addreply")) ac = new AddReplyAction();
+		else if(command.equals("deleteReply")) ac = new DeleteReplyAction();
 		return ac;
 	}
 }
