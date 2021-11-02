@@ -37,7 +37,12 @@
 			<c:forEach var="board" items="${boardList}">
 				<tr align="center">
 					<td>${board.num}</td>
-					<td align="left"><a href="board.do?command=boardView&num=${board.num}">${board.title}</a></td>
+					<td align="left">
+						<a href="board.do?command=boardView&num=${board.num}">${board.title}</a>&nbsp;
+						<c:if test="${board.replycnt>0}">
+							<span style="color:red; font-weight:bold;">[${board.replycnt}]</span>
+						</c:if>
+					</td>
 					<td>${board.userid}</td>
 					<td><fmt:formatDate value="${board.writedate}"/></td>
 					<td>${board.readcount}</td>
