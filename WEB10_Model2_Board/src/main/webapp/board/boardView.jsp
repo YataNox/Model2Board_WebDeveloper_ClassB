@@ -60,12 +60,19 @@
 								<input type="submit" value="답글작성" onclick="return reply_check();">
 							</td>
 						</tr> <!-- 작성자, 날짜 시간, 작성란, 버튼 -->
-						<tr>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
-							<td>&nbsp;</td>
+						
+						<c:forEach var="reply" items="${replyList}">
+						<tr align="center">
+							<td>${reply.userid}</td>
+							<td><fmt:formatDate value="${reply.writedate}" pattern="MM/dd HH:mm"/></td>
+							<td align="left">${reply.content}</td>
+							<td>
+								<c:if test="${reply.userid==loginUser.userid}">
+									<input type="button" value="삭제" onClick="location.href='board.do?command=deleteReply&num=${reply.num}&boardnum=${reply.boardnum}'">
+								</c:if>&nbsp;
+							</td>
 						</tr>
+						</c:forEach>
 					</table>
 				</form>
 		</div>
