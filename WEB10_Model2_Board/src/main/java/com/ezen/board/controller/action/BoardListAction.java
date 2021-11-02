@@ -20,13 +20,13 @@ public class BoardListAction implements Action {
 		int page = 1;
 		
 		HttpSession session = request.getSession();
-		if(request.getParameter("page") != null) {
+		if(request.getParameter("page") != null) { // 파라미터가 있으면 파라미터 값으로 페이지 설정
 			page = Integer.parseInt(request.getParameter("page"));
 			session.setAttribute("page", page);
 		} // 전달된 파라미터 page 값이 비어있지 않다면, 전달된 값으로 page값을 업데이트
-		else if(session.getAttribute("page") != null) {
+		else if(session.getAttribute("page") != null) { // 파마리터가 없으면, 세션 값이 있는지 확인 후 있으면 그 값으로 페이지 설정
 			page = (int)session.getAttribute("page");
-		}else {
+		}else { // 파라미터도 세션도 페이지 값이 없으면 1페이지로 설정
 			page = 1;
 			session.removeAttribute("page");
 		}
