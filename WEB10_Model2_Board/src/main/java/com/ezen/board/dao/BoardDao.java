@@ -165,6 +165,11 @@ public class BoardDao {
 			pstmt.setInt(1, num);
 			
 			pstmt.executeUpdate();
+			
+			sql = "delete from reply where boardnum = ?";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}finally{
