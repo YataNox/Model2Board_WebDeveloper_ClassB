@@ -180,7 +180,7 @@ public class BoardDao {
 	}
 
 	public void insertReply(ReplyDto rdto) {
-		String sql = "insert into reply(boardnum, userid, content) values(?, ?, ?)";
+		String sql = "insert into reply(num, boardnum, userid, content) values(reply_seq.nextVal, ?, ?, ?)";
 		con = DBman.getConnection();
 		
 		try {
@@ -194,5 +194,33 @@ public class BoardDao {
 		}finally {
 			DBman.close(con, pstmt, rs);
 		}
+	}
+
+	public ArrayList<ReplyDto> selectReply(int num) {
+		ArrayList<ReplyDto> list = new ArrayList<ReplyDto>();
+		String sql = "select * from reply where boardnum = ? order by num desc";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, num);
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				ReplyDto rdto = new ReplyDto();
+				rdto.setNum(rs.getInt("num"));
+				rdto.setBoardnum(rs.getInt("boardnum"));
+				rdto.setUserid(rs.getString("userid"));
+				rdto.setWritedate(rs.getTimestamp("writedate"));
+				rdto.setContent(rs.getString("content"));
+				list.add(rdto);
+			}
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+		return list;
 	}
 }
