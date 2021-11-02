@@ -7,6 +7,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.ezen.board.dto.BoardDto;
+import com.ezen.board.dto.ReplyDto;
 import com.ezen.board.util.DBman;
 import com.ezen.board.util.Paging;
 
@@ -176,5 +177,22 @@ public class BoardDao {
 		}
 		
 		return count;
+	}
+
+	public void insertReply(ReplyDto rdto) {
+		String sql = "insert into reply(boardnum, userid, content) values(?, ?, ?)";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, rdto.getBoardnum());
+			pstmt.setString(2, rdto.getUserid());
+			pstmt.setString(3, rdto.getContent());
+			pstmt.executeUpdate();
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
 	}
 }
