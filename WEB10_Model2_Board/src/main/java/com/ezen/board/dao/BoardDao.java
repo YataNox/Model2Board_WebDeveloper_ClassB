@@ -46,6 +46,19 @@ public class BoardDao {
 				bdto.setReadcount(rs.getInt("readcount"));
 				bdto.setWritedate(rs.getTimestamp("writedate"));
 				
+				String sql2 = "select count(*) as cnt from reply where boardnum = ?";
+				PreparedStatement pstmt2 = con.prepareStatement(sql2);
+				pstmt2.setInt(1, bdto.getNum());
+				ResultSet rs2 = pstmt2.executeQuery();
+				
+				if(rs2.next())
+					bdto.setReplycnt(rs2.getInt("cnt"));
+				else
+					bdto.setReplycnt(0);
+				
+				pstmt2.close();
+				rs2.close();
+				
 				list.add(bdto);
 			}
 		}catch(SQLException e) {
