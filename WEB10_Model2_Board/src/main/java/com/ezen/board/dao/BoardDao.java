@@ -223,4 +223,20 @@ public class BoardDao {
 		
 		return list;
 	}
+
+	public void deleteReply(String num) {
+		String sql = "delete from reply where num = ?";
+		con = DBman.getConnection();
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, Integer.parseInt(num));
+			pstmt.executeUpdate();
+		}catch(SQLException e){
+			e.printStackTrace();
+		}finally {
+			DBman.close(con, pstmt, rs);
+		}
+		
+	}
 }
