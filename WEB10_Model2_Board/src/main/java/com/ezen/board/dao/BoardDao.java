@@ -138,7 +138,7 @@ public class BoardDao {
 
 	public void updateBoard(BoardDto bdto) {
 		con = DBman.getConnection();
-		String url="update board set userid=?, pass=?, email=?, title=?, content=? "
+		String url="update board set userid=?, pass=?, email=?, title=?, content=?, imgfilename=? "
 				+ "where num=?";
 		
 		try {
@@ -148,7 +148,8 @@ public class BoardDao {
 			pstmt.setString(3, bdto.getEmail());
 			pstmt.setString(4, bdto.getTitle());
 			pstmt.setString(5, bdto.getContent());
-			pstmt.setInt(6, bdto.getNum());
+			pstmt.setString(6, bdto.getImgfilename());
+			pstmt.setInt(7, bdto.getNum());
 			
 			pstmt.executeUpdate();
 		}catch(SQLException e) {
