@@ -40,7 +40,7 @@
 				<th>이미지</th>
 				<td><input type="file" name="imgfilename"></td>
 			</tr>
-			</table>
+			</table><br>
 			<input type="submit" value="등록" onclick="return boardCheck()">&nbsp;
 			<input type="reset" value="다시작성"/>
 			<input type="button" value="목록으로" onclick="location.href='board.do?command=boardlist'"/>
