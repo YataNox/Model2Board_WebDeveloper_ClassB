@@ -126,6 +126,7 @@ public class BoardDao {
 				bdto.setContent(rs.getString("content"));
 				bdto.setWritedate(rs.getTimestamp("writedate"));
 				bdto.setReadcount(rs.getInt("readcount"));
+				bdto.setImgfilename(rs.getString("imgfilename"));
 			}
 		}catch(SQLException e) {
 			e.printStackTrace();
