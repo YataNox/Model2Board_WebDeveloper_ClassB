@@ -25,16 +25,16 @@ public class BoardWriteAction implements Action {
 		String path = context.getRealPath("upload");
 		
 		try {
-		MultipartRequest multi = new MultipartRequest(request,
-				path, 5*1024*1024, "UTF-8",
-				new DefaultFileRenamePolicy());
+			MultipartRequest multi = new MultipartRequest(request,
+					path, 5*1024*1024, "UTF-8",
+					new DefaultFileRenamePolicy());
 		
-		bdto.setUserid(multi.getParameter("userid"));
-		bdto.setPass(multi.getParameter("pass"));
-		bdto.setEmail(multi.getParameter("email"));
-		bdto.setTitle(multi.getParameter("title"));
-		bdto.setContent(multi.getParameter("content"));
-		bdto.setImgfilename(multi.getFilesystemName("imgfilename"));
+			bdto.setUserid(multi.getParameter("userid"));
+			bdto.setPass(multi.getParameter("pass"));
+			bdto.setEmail(multi.getParameter("email"));
+			bdto.setTitle(multi.getParameter("title"));
+			bdto.setContent(multi.getParameter("content"));
+			bdto.setImgfilename(multi.getFilesystemName("imgfilename"));
 		}catch(Exception e) {
 			System.out.println("업로드 실패 : " + e);
 		}
