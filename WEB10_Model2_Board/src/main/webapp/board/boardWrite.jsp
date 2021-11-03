@@ -36,6 +36,10 @@
 				<th>내용</th>
 				<td><textarea cols="70" rows="15" name="content"></textarea> * 필수</td>
 			</tr>
+			<tr>
+				<th>이미지</th>
+				<td><input type="file" name="imgfilename"></td>
+			</tr>
 			</table>
 			<input type="submit" value="등록" onclick="return boardCheck()">&nbsp;
 			<input type="reset" value="다시작성"/>
