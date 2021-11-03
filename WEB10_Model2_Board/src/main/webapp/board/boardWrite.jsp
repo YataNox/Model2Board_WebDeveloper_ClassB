@@ -13,7 +13,7 @@
 		<div id="wrap" align="center">
 			<h1>게시글 등록</h1>
 		</div>
-		<form action="board.do" name="frm" method="post">
+		<form action="board.do" name="frm" method="post" enctype="multipart/form-data">
 			<input type="hidden" name="command" value="boardWrite">
 			<table>
 			<tr>
