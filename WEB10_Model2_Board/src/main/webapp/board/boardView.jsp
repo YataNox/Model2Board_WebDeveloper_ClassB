@@ -25,7 +25,17 @@
 					<th>제목</th><td colspan="3">${board.title}</td>
 				</tr>
 				<tr>
-					<th>내용</th><td colspan="3"><pre>${board.content}</pre></td>
+					<th>내용</th><td colspan="2"><pre>${board.content}</pre></td>
+					<td width="250" align="center">
+						<c:choose>
+							<c:when test="${empty board.imgfilename}">
+								<img src="upload/noname.jpg" width="200">
+							</c:when>
+							<c:otherwise>
+								<img src="upload/${board.imgfilename}" width="200">
+							</c:otherwise>
+						</c:choose>
+					</td>
 				</tr>
 			</table>
 			<br>
