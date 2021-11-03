@@ -34,7 +34,10 @@ public class BoardUpdateAction implements Action {
 			bdto.setTitle(multi.getParameter("title"));
 			bdto.setContent(multi.getParameter("content"));
 			bdto.setNum(Integer.parseInt(multi.getParameter("num")));
-			bdto.setImgfilename(multi.getFilesystemName("imgfilename"));
+			String filename = multi.getFilesystemName("imgfilename");
+			if(filename == null)
+				filename = multi.getParameter("oldfilename");
+			bdto.setImgfilename(filename);
 		}catch(Exception e) {
 			System.out.println("업로드 실패 : " + e);
 		}
