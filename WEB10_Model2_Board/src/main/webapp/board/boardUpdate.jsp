@@ -24,11 +24,11 @@
 					</tr>
 					<tr>
 						<th>이메일</th>
-						<td><input type="text" name="email" value="${board.email}" size="12"></td>
+						<td><input type="text" name="email" value="${board.email}" size="30"></td>
 					</tr>
 					<tr>
 						<th>제목</th>
-						<td><input type="text" name="title" value="${board.title}" size="12">*</td>
+						<td><input type="text" name="title" value="${board.title}" size="50">*</td>
 					</tr>
 					<tr>
 						<th>내용</th>
