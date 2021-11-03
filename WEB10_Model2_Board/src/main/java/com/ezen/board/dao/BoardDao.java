@@ -70,8 +70,8 @@ public class BoardDao {
 
 	public void insertBoard(BoardDto bdto) {
 		con = DBman.getConnection();
-		String sql = "insert into board(num, userid, pass, email, title, content)"
-				+ " values(board_seq.nextVal, ?, ?, ?, ?, ?)";
+		String sql = "insert into board(num, userid, pass, email, title, content, imgfilename)"
+				+ " values(board_seq.nextVal, ?, ?, ?, ?, ?, ?)";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -80,6 +80,7 @@ public class BoardDao {
 			pstmt.setString(3, bdto.getEmail());
 			pstmt.setString(4, bdto.getTitle());
 			pstmt.setString(5, bdto.getContent());
+			pstmt.setString(6, bdto.getImgfilename());
 			
 			pstmt.executeUpdate();
 		}catch(SQLException e) {
